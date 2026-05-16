@@ -233,12 +233,14 @@ section { padding: 70px 6%; }
 
 /* ── PAGE HEADER ── */
 .page-header {
-  background: linear-gradient(rgba(13,43,26,0.82), rgba(13,43,26,0.82)), center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 70px 6%;
   text-align: center;
 }
 .page-header h1 { color: var(--white); font-size: 38px; font-weight: 700; margin-bottom: 12px; }
-.page-header p { color: #aad0b5; font-size: 17px; max-width: 620px; margin: 0 auto; }
+.page-header p { color: #e8f0ea; font-size: 17px; max-width: 620px; margin: 0 auto; }
 
 /* ── CONTACT FORM ── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1060px; }
