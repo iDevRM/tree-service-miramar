@@ -306,3 +306,39 @@ footer nav a:hover { color: var(--white); }
   .cta-banner h2 { font-size: 26px; }
   .page-header h1 { font-size: 28px; }
 }
+
+
+/* ---- Services nav dropdown ---- */
+.nav-links .has-dropdown { position: relative; display: inline-flex; align-items: center; }
+.has-dropdown > a { display: inline-flex; align-items: center; gap: 6px; }
+.has-dropdown > a::after {
+  content: ""; width: 0; height: 0;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
+/* padding-top (not margin) keeps the gap inside the hover target */
+.dropdown-menu {
+  display: none; position: absolute; top: 100%; left: -14px;
+  padding-top: 14px; min-width: 240px; z-index: 200;
+}
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu { display: block; }
+.dropdown-menu-list {
+  list-style: none; margin: 0; padding: 8px 0;
+  background: var(--dark);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-top: 3px solid var(--green-light);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.40);
+}
+.dropdown-menu-list li + li { border-top: 1px solid rgba(255,255,255,0.07); }
+.dropdown-menu-list a {
+  display: block; padding: 11px 20px;
+  color: #aacfb5; font-size: 14px; font-weight: 500;
+  white-space: nowrap; border-radius: 0;
+}
+.dropdown-menu-list a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+@media (max-width: 860px) {
+  .dropdown-menu { position: static; padding-top: 6px; min-width: 0; }
+  .dropdown-menu-list { box-shadow: none; }
+}
